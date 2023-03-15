@@ -1,0 +1,44 @@
+body {
+	max-width: 1080px;
+	width: 100%;
+	margin: auto;
+	padding: 0 20px;
+}
+
+nav {
+	margin-top: 50px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-size: small;
+	font-weight: bold;
+
+	img {
+		object-fit: contain;
+		height: 30px;
+	}
+
+	ul {
+		display: flex;
+		align-items: center;
+		
+		li:first-child {
+			display: inline-flex;
+			align-items: center;
+			svg {
+				margin-left:5px;
+				width: 20px;
+			}
+		}
+
+		li:not(:last-child) {
+			margin-right: 50px;
+		}
+	}
+}
+
+.head {
+}
+
+.tri{
+}

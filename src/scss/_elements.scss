@@ -1,0 +1,17 @@
+.btn {
+	height: 40px;
+	padding: 0 14px;
+	border-radius: 10px;
+	border: 2px solid transparent;
+	font-weight: 500;
+	color: #FCF2C3;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.btn--transparent {
+	color: black;
+	border-color: black;
+	font-weight: bold;
+}

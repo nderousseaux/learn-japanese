@@ -1,0 +1,24 @@
+.bg {
+	position: absolute;
+	top: 0;
+	left: 0;
+	// arriière plan de la page
+	z-index: -1;
+	
+
+	background-image: url("../../assets/bg.jpg");
+	display: block;
+	background-size: calc(60% + 100px);
+	background-position: right top;
+	background-repeat: no-repeat;
+	height: 100%;
+	width: 100%;
+	overflow: visible;
+
+	// A partir de 1200px, la taille de l'image de fond reste fixe
+	@media (max-width: 1200px) {
+		background-size: 820px;
+		transform: translateX(100px);
+	}
+
+}
