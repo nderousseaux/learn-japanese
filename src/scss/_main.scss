@@ -13,6 +13,10 @@ nav {
 	font-size: small;
 	font-weight: bold;
 
+	input {
+		display: none;
+	}
+
 	img {
 		object-fit: contain;
 		height: 30px;
@@ -38,7 +42,175 @@ nav {
 }
 
 .head {
+	max-width: 310px;
+	margin-top: 130px;
+	margin-bottom: 130px;
+	h1 {
+		letter-spacing: 2px;
+		font-size: 4rem;
+		font-weight: 600;
+		margin-bottom: 20px;
+	}
+	p {
+		font-size: 1rem;
+		font-weight: 300;
+		line-height: 1.4;
+	}
+	.btn {
+		margin-top: 60px;
+		font-size: small;
+		letter-spacing: 1px;
+	}
+
+	@media screen and (max-width: 650px) {
+		margin-top: 80px;
+		margin-bottom: 80px;
+		margin-left: auto;
+		margin-right: auto;
+		text-align: center;
+
+		.btn {
+			margin-top: 40px;
+		}
+	}
+	
+
 }
 
 .tri{
+	display: flex;
+  justify-content: space-between;
+	gap: 100px;
+
+	@media (max-width: 1200px) {
+		gap : 50px;
+	}
+
+	@media (max-width: 750px) {
+		flex-direction: column;
+		align-items: center;
+		margin: auto;
+		img {
+			margin: auto;
+		}
+	}
+
+	img {
+		height: 50px;
+		margin-bottom: 30px;
+	}
+	
+	p {
+		text-align: justify;
+		line-height: 1.4;
+	}
+}
+
+@media (max-width: 650px) {	
+	nav {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		
+		div{
+			display: flex;
+			width: 100%;
+			justify-content: space-between;
+			align-items: center;
+		}
+
+		ul {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			height: 100%;
+			width: 100%;
+			overflow: hidden;
+			font-size: large;
+			margin-top: 20px;
+			li:not(:last-child) {
+				margin-right: 0px;
+				margin-bottom: 20px;
+			}
+		}
+	}
+
+	.menu-btn {
+		display: none;
+	}
+	
+	/* menu */
+	.menu {
+		clear: both;
+		max-height: 0;
+		transition: max-height .2s ease-out;
+	}
+	
+	/* menu icon */
+	
+	.menu-icon {
+		cursor: pointer;
+		// display: inline-block;
+		float: right;
+		padding: 18px 18px;
+		// position: relative;
+		user-select: none;
+
+
+		// button
+		.navicon {
+			background: #333;
+			display: block;
+			height: 2px;
+			position: relative;
+			transition: background .2s ease-out;
+			width: 18px;
+
+			&:before,
+			&:after {
+				background: #333;
+				content: '';
+				display: block;
+				height: 100%;
+				position: absolute;
+				transition: all .2s ease-out;
+				width: 100%;
+			}
+
+			&:before {
+				top: 5px;
+			}
+
+			&:after {
+				top: -5px;
+			}
+		}	
+	}
+	
+
+	/* Open menu */
+	.open {
+		.menu {
+			max-height: 240px;
+			
+		}
+	
+		.navicon {
+			background: transparent;
+		}
+		
+		.navicon:before {
+			transform: rotate(-45deg);
+		}
+		
+		.navicon:after {
+			transform: rotate(45deg);
+		}
+		
+		.navicon:before,
+		.navicon:after {
+			top: 0;
+		}
+	}
+	
 }

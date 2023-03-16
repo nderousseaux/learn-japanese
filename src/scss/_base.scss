@@ -1,24 +1,73 @@
 .bg {
 	position: absolute;
 	top: 0;
-	left: 0;
+	right: 0;
 	// arriière plan de la page
 	z-index: -1;
 	
 
 	background-image: url("../../assets/bg.jpg");
 	display: block;
-	background-size: calc(60% + 100px);
+	background-size: 100%;
 	background-position: right top;
 	background-repeat: no-repeat;
-	height: 100%;
-	width: 100%;
+	height: 800px;
+	width: 900px;
 	overflow: visible;
 
 	// A partir de 1200px, la taille de l'image de fond reste fixe
 	@media (max-width: 1200px) {
 		background-size: 820px;
 		transform: translateX(100px);
+	}
+
+	@media screen and (max-width: 860px) {
+		transform: translateX(calc(100px + (860px - 100vw)));
+		height: calc(800px + (100vw));
+	}
+
+	@media (max-width: 650px) { 
+		display: none;
+	}
+}
+
+.boule {
+	position: absolute;
+	top: 575px;
+
+	// arrière plan de la page
+	z-index: -1;
+
+	background-color: rgb(243, 204, 195);
+	border-radius: 100%;
+	height: 150px;
+	width: 150px;
+
+	@media screen and (max-width: 1244px) {
+		display: none;
+	}
+
+	@media (max-width: 650px) { 
+		display: block;
+		top: 450px;
+	}
+}
+
+.boule-left {
+	left: -45px;
+}
+
+.boule-top {
+	display: none;
+	position: absolute;
+	top: -45px;
+	right: -45px;
+	height: 200px;
+	width: 200px;
+
+
+	@media (max-width: 650px) { 
+		display: block;
 	}
 
 }
