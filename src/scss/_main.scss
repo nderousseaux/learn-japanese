@@ -90,6 +90,7 @@ nav {
 		flex-direction: column;
 		align-items: center;
 		margin: auto;
+		max-width: 400px;
 		img {
 			margin: auto;
 		}
@@ -213,4 +214,18 @@ nav {
 		}
 	}
 	
+}
+
+footer {
+	margin-top: 80px;
+	margin-bottom: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	p {
+		font-size: small;
+		text-align: center;
+		color: gray;
+	}
+
 }
